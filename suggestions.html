@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Feedback Forms - Running Site</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+   <header>
+    <h1 id="main-title" style="font-style: italic;">Suggestions</h1>
+  </header>
+  <nav>
+    <img src="actuallogo.svg" alt="Runner Logo">
+    <a href="index.html">Home</a>
+    <a href="runningtips.html">Running Tips</a>
+    <a href="gear-recommendations.html">Gear Recommendations</a>
+    <a href="suggestions.html" class="active">Feedback Forms</a>
+  </nav>
+
+  <div class="content">
+    <div style="width:100%; display:flex; justify-content:center; margin-top:18px;">
+      <div class="title-badge-small">
+        FEEDBACK FORMS
+        <br />
+        <span style="font-weight:400; font-size:12px;">please leave some of your own advice!</span>
+      </div>
+    </div>
+
+    <!-- RUNNING GEAR RECOMMENDATIONS FORM -->
+    <section class="section" style="justify-content:center;">
+      <div style="flex: 0 1 900px; width:100%;">
+        <div class="card-wrap" style="padding-top:24px;">
+          <div class="title-badge">RUNNING GEAR RECOMMENDATIONS</div>
+
+          <form id="gear-form" class="card" novalidate>
+            <div class="field">
+              <label for="name">Name <span class="muted"></span></label>
+              <input id="name" name="name" type="text" placeholder="Your name" />
+              <small class="error" id="name-error" aria-live="polite"></small>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              <small class="error" id="email-error" aria-live="polite"></small>
+            </div>
+
+            <div class="field">
+              <label for="gear">Gear Suggestion</label>
+              <select id="gear" name="gear" required>
+                <option value="" disabled selected>Select a category</option>
+                <option value="apparel">Apparel</option>
+                <option value="shoes">Shoes</option>
+                <option value="accessories">Accessories</option>
+              </select>
+              <small class="error" id="gear-error" aria-live="polite"></small>
+            </div>
+            <div class="field">
+              <label for="message">Message (Optional)</label>
+              <textarea id="message" name="message" rows="4" placeholder="Share your favorite gear recommendations!"></textarea>
+              <small class="error" id="message-error" aria-live="polite"></small>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- RUNNING TIPS FORM -->
+    <section class="section" style="justify-content:center; margin-top:60px;">
+      <div style="flex: 0 1 900px; width:100%;">
+        <div class="card-wrap" style="padding-top:24px;">
+          <div class="title-badge">RUNNING TIPS</div>
+
+          <form id="tips-form" class="card" novalidate>
+            <div class="field">
+              <label for="tip-name">Name <span class="muted">(Optional)</span></label>
+              <input id="tip-name" name="tip-name" type="text" placeholder="Your name" />
+              <small class="error" id="tip-name-error" aria-live="polite"></small>
+            </div>
+
+            <div class="field">
+              <label for="tip-email">Email</label>
+              <input id="tip-email" name="tip-email" type="email" placeholder="you@example.com" required />
+              <small class="error" id="tip-email-error" aria-live="polite"></small>
+            </div>
+            <div class="field">
+              <label for="tip-message">Running Tip</label>
+              <textarea id="tip-message" name="tip-message" rows="4" placeholder="Share your best running advice!"></textarea>
+              <small class="error" id="tip-message-error" aria-live="polite"></small>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="form.js"></script>
+</body>
+</html>

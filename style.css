@@ -1,0 +1,251 @@
+style.css
+
+/*home page css*/
+body {
+  font-family: Arial, sans-serif; /*picks a font*/
+  margin: 1px;/*picks a margin size*/
+  padding: 1px;/*picks a padding size*/
+  background-color: #f8f8f8;/*picks a background color*/
+  color:gray;/*picks a text color*/
+}
+
+nav {
+  display: flex; /*puts items in a row*/
+  align-items: center;/*centers items vertically*/
+  background-color: white; /*picks a background color*/
+  padding: 10px 20px; /*picks a padding size*/
+  border-bottom: 1px solid #ddd; /*picks a border size*/
+}
+
+nav img {
+  height: 40px; /*logo size*/
+  margin-right: 10px; /*spacing after logo*/
+}
+
+nav a {
+  margin: 0 15px; /*space btwn links*/
+  text-decoration: none; /*removes an underline*/
+  color: black; /*link color*/
+  font-weight: 500; /*medium bold*/
+}
+
+nav a.active {
+  background-color: #f1f1f1; /*background color*/
+  padding: 5px 10px; /*padding size*/
+  border-radius: 5px; /*makes corners rounded*/
+}
+
+.content {
+  display: flex; /*flexible layout*/
+  flex-direction: column; /*content lays vertically*/
+  gap: 50px; /* space between section size*/
+  padding: 30px; /*padding size*/
+}
+
+.section {
+  display: flex; /*flexible layout*/
+  align-items: center; /*center items*/
+  justify-content: space-between; /*space between items*/
+  gap: 30px; /*space between elements*/
+}
+
+.section img {
+  width: 45%; /*image width*/
+  border-radius: 10px; /*rounded corners*/
+}
+
+.section .text {
+  width: 55%; /*width for text*/
+}
+
+.section h2 {
+  margin-top: 0; /*removes a top margin*/
+}
+
+#main-title{
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+}
+
+@media (max-width: 768px) { 
+  .section {
+    flex-direction: column; /*stack vertically for smaller screens*/
+  }
+
+  .section img,
+  .section .text {
+    width: 100%; /*full width*/
+  }
+}
+
+/*running tips page css*/
+
+.tips-section {
+  margin: 40px auto; /*center section with top/bottom margin*/
+  max-width: 1000px;/*limit width*/
+  text-align: center;/*center-align text*/
+}
+
+.tips-section h3 {
+  margin-bottom: 20px; /*spacing under heading*/
+  color: #666; /*darker gray color*/
+  letter-spacing: 1px;  /*extra space in between letters*/
+}
+
+.tips-grid {
+  display: grid; /*layout*/
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /*fexible comlumns*/
+  gap: 20px; /*space btwn grid items*/
+}
+
+.tip-card {
+  background: white; /*background color*/
+  padding: 15px; /*inner space*/
+  border: 1px solid #ddd; /*small border*/
+  border-radius: 8px;/*rounded corners*/
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.05); /*small shadow*/
+}
+
+/*gear recommendation page css*/
+
+.gear-section {
+  margin: 50px auto;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.gear-section h3 {
+  margin-bottom: 20px;
+  color: #666;
+  letter-spacing: 1px;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  position: absolute;
+  left: 10px;
+  font-size: 12px;
+}
+
+.gear-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.gear-card {
+  background: white;
+  width: 280px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.gear-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.gear-card p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* suggestions page*/
+
+.title-badge-small{
+  display:inline-block;
+  background:#fff;
+  padding:10px 20px;
+  border-radius:14px;
+  border:1px solid #e6e6e6;
+  box-shadow:0 6px 18px rgba(0,0,0,0.04);
+  font-weight:700;
+  color:#333;
+  text-align:center;
+  line-height:1.05;
+  margin-bottom:18px;
+}
+
+.card-wrap { max-width: 920px; margin: 0 auto; position: relative; padding-top: 28px; }
+.title-badge {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  background: #fff;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 1px solid #e6e6e6;
+  font-size: 13px;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+}
+
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  padding: 26px;
+  margin-top: 30px;
+  box-shadow: 0 8px 24px rgba(16,24,40,0.02);
+}
+
+
+.field { margin-bottom: 16px; }
+label { display:block; font-size:13px; color:#666; margin-bottom:8px; font-weight:600; }
+input[type="text"], input[type="email"], select, textarea {
+  width:100%;
+  padding:12px 14px;
+  border-radius:6px;
+  border:1px solid #e9e9e9;
+  background:#fff;
+  font-size:14px;
+  color:#333;
+  outline:none;
+}
+input::placeholder, textarea::placeholder { color:#bfbfbf; }
+
+
+input:focus, select:focus, textarea:focus {
+  border-color:#cddcff;
+  box-shadow:0 6px 18px rgba(76,156,255,0.06);
+}
+
+textarea { min-height:90px; resize:vertical; }
+
+small.error { display:block; height:18px; margin-top:6px; color:#b00020; font-size:13px; }
+
+.btn-submit {
+  display:block;
+  width:100%;
+  padding:12px;
+  background:#222;
+  color:#fff;
+  border:none;
+  border-radius:6px;
+  font-weight:700;
+  font-size:15px;
+  cursor:pointer;
+  margin-top:6px;
+}
+.btn-submit:hover { background:#111; }
+
+@media (max-width:760px) {
+  .card { padding:20px; }
+  .card-wrap { padding-top:18px; }
+  .title-badge { top: -8px; padding:6px 12px; font-size:12px; }
+}
+
+select:invalid {
+  color: #bfbfbf;
+}
+option {
+  color: #333;
+}
